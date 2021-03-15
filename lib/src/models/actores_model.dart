@@ -34,6 +34,7 @@ class Actor {
     this.profilePath
   });
 
+  //ESTE TAMBIEN ES UN CONSTRUCTOR PERO SE DEFINE PARA QUE PUEDA TRABAJAR CON UN MAPA
   Actor.fromJsonMap( Map<String, dynamic> json ){
     castId      = json['cast_id'];
     character   = json['character'];
