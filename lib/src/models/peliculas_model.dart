@@ -15,6 +15,7 @@ class Peliculas{
 }
 
 class Pelicula {
+  String uniqueId;
   bool adult;
   String backdropPath;
   List<int> genreIds;
@@ -69,6 +70,14 @@ class Pelicula {
       return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjz9bcXNQOJfpczyMt4WxRx5LU4nRZJqoEXQ&usqp=CAU';
     }else{
       return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
+  }
+
+  getBackgroundImg(){
+    if (posterPath == null){
+      return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjz9bcXNQOJfpczyMt4WxRx5LU4nRZJqoEXQ&usqp=CAU';
+    }else{
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
     }
   }
 }
